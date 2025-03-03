@@ -31,3 +31,5 @@ if(marks <0 || marks >100 || typeof marks !== "number" ){
     console.log("Grade: E");
 }
 // Rewrite this (grading) code using a switch statement
+
+76>60 ? console.log("Hi there") : console.log("not true here")

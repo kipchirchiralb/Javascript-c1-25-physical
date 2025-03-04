@@ -7,7 +7,7 @@ function doSomething(){
     console.log("Regular function");  
 }
 
-const doSomethingElse = ()=>{
+const doSomethingElse = () => {
     console.log("Block of code to be executed ");
     console.log("Arrow function");
 }
@@ -49,6 +49,32 @@ convertCurrency(543, "japan")
 // global scope vs block scope
 
 // Write a function that takes a number as an argument and checks if the number is even or odd
+
+function checkIfEvenOrOdd(number){
+    if(number%2==0){
+        console.log("The number "+ number+ " is Even")
+    }else{
+        console.log("The number "+ number+ " is Odd")
+    }
+}
+checkIfEvenOrOdd(90)
+checkIfEvenOrOdd(901)
+checkIfEvenOrOdd(875)
+checkIfEvenOrOdd(876)
+
 // write a function that takes in an array of names, loops through the names changing them to all uppercase
+function changeNamesToUppercase(names){
+    // ["albert","nobert"] 
+    let finalArray = []
+    for(let index=0; index<names.length; index=index+1){
+        finalArray.push( names[index].toUpperCase()  )
+    }
+    console.log(finalArray);
+    
+}
+
+changeNamesToUppercase(["albert","nobert"] )
+changeNamesToUppercase(["joy","jane","jack","japhet","jones","june"] )
+
 
 // strings and numbers and arrays

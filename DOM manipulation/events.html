@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Events</title>
+  </head>
+  <body>
+    <header>
+      <a href="#">Logo</a>
+      <button id="open-menu">Menu</button>
+      <nav id="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <button id="close-menu">Close Menu</button>
+      </nav>
+    </header>
+    <main>
+      <h1>Javasctipt Events</h1>
+      <p>
+        Events allow for running javascript code(a callback function) when a
+        user interacts with an element e.g. click, type in an input element,
+        scroll.....
+      </p>
+      <input type="text" name="search-element" id="search-element" />
+      <input type="password" name="pass" id="pass" />
+    </main>
+    <style>
+      header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: beige;
+      }
+      header nav {
+        position: fixed;
+        inset: 0; /* top: 0 ; bottom:0 ; left:0; right: 0 */
+        background-color: rgba(0, 100, 0, 0.9);
+        display: none; /*hiding nav by default -- use js to bring back display flex when user clicks menu button*/
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      header nav a {
+        color: white;
+        text-decoration: none;
+      }
+      main {
+        text-align: center;
+        padding: 20px;
+        height: 5000px;
+      }
+
+      .opened-nav {
+        display: flex;
+        animation: slide-in-left 0.3s ease-in-out forwards;
+      }
+
+      @keyframes slide-in-left {
+        0% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+    <script src="./events.js"></script>
+  </body>
+</html>

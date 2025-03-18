@@ -30,7 +30,6 @@ const programs = [
 ];
 
 let currentSlideIndex = 0;
-
 function showSlide(program) {
   // program - object {id: , title: , url: ,image: , durationInMonths: ,}
   let slideItemDiv = document.createElement("div");

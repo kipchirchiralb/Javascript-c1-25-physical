@@ -598,7 +598,7 @@ const profilesDiv = document.getElementById("user-profiles");
 
 people.forEach((person) => {
   let userDiv = document.createElement("div");
-  userDiv.setAttribute("data-person-id", person.id);
+  userDiv.setAttribute("id", person.id);
   userDiv.setAttribute("class", "profile-card");
   // Template Literals
   userDiv.innerHTML = `

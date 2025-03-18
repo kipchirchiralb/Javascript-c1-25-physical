@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Slider</title>
+  </head>
+  <body>
+    <header>
+      <a href="#">Logo</a>
+      <nav>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero-slider">
+        <div class="slides"></div>
+      </section>
+    </main>
+
+    <style>
+      .slide-item {
+        background-image: url(./data.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      h1 {
+        font-size: 50px;
+        color: aqua;
+        background-color: rgba(0, 0, 0, 0.459);
+        padding: 10px;
+      }
+      .slide-item.active {
+        display: flex;
+        animation: slide-down 0.4s ease-in-out;
+      }
+      @keyframes slide-down {
+        0% {
+          transform: translateY(-500px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+    <script src="./slider.js"></script>
+  </body>
+</html>
